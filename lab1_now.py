@@ -1,4 +1,4 @@
-import requests  # εισαγωγή της βιβλιοθήκης
+import requests # Εισαγωγή της βιβλιοθήκης
 
 def more(text):
     count = 0
@@ -10,21 +10,36 @@ def more(text):
             if reply == 'n':
                 break
 
+    return;
+
+'''
+url = 'http://python.org/'  # προσδιορισμός του url
+
+with requests.get(url) as response:  # το αντικείμενο response
+    html = response.text
+    more(html)
+'''
+
 # Ερώτημα 1ο - Ζητάει από τον χρήστη ένα URL
 url = input("- Give url:\t")
-
 http_start = "https://"
 if not url.startswith("https://"):
     url = "https://" + url
+print(url)
 
+# Ερώτημα 1ο - Ζητάει από τον χρήστη ένα URL
+url = input("- Give url:\t")
+http_start = "https://"
+if not url.startswith("https://"):
+    url = "https://" + url
 print(url)
 
 # Ερώτημα 2ο - Πραγματοποιεί ένα αίτημα HTTP σε αυτό το URL
 with requests.get(url) as response:
     # Ερώτημα 3ο - Τυπώνει τις κεφαλίδες (headers) της απόκρισης HTTP
-    #print(f"\n- Κεφαλίδες της απόκρισης HTTP:")
-    #for key in response.headers:
-    #    print(f"Name: {key}, Value: {response.headers[key]}")
+    '''print(f"\n- Κεφαλίδες της απόκρισης HTTP:")
+    for key in response.headers:
+        print(f"Name: {key}, Value: {response.headers[key]}")'''
     
     # Ερώτημα 4ο - Τροποποιήστε τον κώδικα ώστε να απαντάει για το
     #              URL που έδωσε ο χρήστης με τις εξής πληροφορίες:
