@@ -1,4 +1,4 @@
-import requests  # εισαγωγή της βιβλιοθήκης
+import requests  # Εισαγωγή της βιβλιοθήκης
 
 def more(text):
     count = 0
@@ -9,12 +9,17 @@ def more(text):
             reply = input('Show more (y/n)? ')
             if reply == 'n':
                 break
+    
+    return;
 
-#url = 'http://python.org/'  # προσδιορισμός του url
+"""
+- Example:
 
-#with requests.get(url) as response:  # το αντικείμενο response
-#    html = response.text
-#    more(html)
+url = 'http://python.org/'  # προσδιορισμός του url
+
+with requests.get(url) as response:  # το αντικείμενο response
+    html = response.text
+    more(html)"""
 
 # Ερώτημα 1ο - Ζητάει από τον χρήστη ένα URL
 url = input("- Give url:\t")
