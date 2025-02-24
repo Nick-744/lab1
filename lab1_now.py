@@ -27,13 +27,6 @@ if not url.startswith("https://"):
     url = "https://" + url
 print(url)
 
-# Ερώτημα 1ο - Ζητάει από τον χρήστη ένα URL
-url = input("- Give url:\t")
-http_start = "https://"
-if not url.startswith("https://"):
-    url = "https://" + url
-print(url)
-
 # Ερώτημα 2ο - Πραγματοποιεί ένα αίτημα HTTP σε αυτό το URL
 with requests.get(url) as response:
     # Ερώτημα 3ο - Τυπώνει τις κεφαλίδες (headers) της απόκρισης HTTP
