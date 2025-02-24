@@ -19,3 +19,7 @@ def more(text):
 # Ερώτημα 1ο
 url = input("Give url:\t")
 print(url)
+
+# Ερώτημα 2ο
+with requests.get(url) as response:
+    print(response.text)
