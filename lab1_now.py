@@ -24,3 +24,7 @@ if not url.startswith("https://"):
     url = "https://" + url
 
 print(url)
+
+# Ερώτημα 2ο
+with requests.get(url) as response:
+    print(response.text)
