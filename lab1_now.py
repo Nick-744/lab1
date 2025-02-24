@@ -18,4 +18,9 @@ def more(text):
 
 # Ερώτημα 1ο
 url = input("Give url:\t")
+
+http_start = "https://"
+if not url.startswith("https://"):
+    url = "https://" + url
+
 print(url)
